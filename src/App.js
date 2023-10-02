@@ -1,8 +1,16 @@
-import './App.css';
+import "./App.css";
+import Nav from "./components/Navbar";
+import Routing from "./components/Routing";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <h1>Let's begin</h1>
+    <>
+      <Nav />
+      <Routing />
+      <Footer />
+    </>
   );
 }
 

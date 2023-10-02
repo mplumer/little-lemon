@@ -1,38 +1,243 @@
-.App {
+* {
+  font-family: "Markazi Text", "Karla", serif;
+}
+
+label,
+input,
+select,
+textarea,
+p {
+  font-family: "Karla";
+}
+
+input,
+select,
+option,
+textarea {
+  background-color: #eeeeee;
+  border: none;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0.2rem;
+  resize: none;
+}
+
+input,
+select {
+  width: 10rem;
+}
+
+body {
+  margin: 0; /* removes white border around website*/
+  padding: 0;
+  margin-top: -22px;
+}
+
+menu {
+  list-style: none;
+  display: grid;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.burger-icon {
+  margin-top: 1.5rem;
+}
+
+a:visited,
+Link:visited,
+a:link,
+Link:link {
+  text-decoration: none;
+  color: black;
+}
+
+.action-button {
+  background-color: #f4ce14;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-family: "Karla";
+  font-size: 2rem;
+}
+
+.action-button:hover {
+  background-color: #495e57;
+  color: #eeeeee;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #edefee;
+  transition: 0.2s;
+}
+
+.subsection {
+  margin-top: -2rem;
+}
+
+/* NAVBAR STYLING */
+.navbar-menu {
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+
+.navbar-menu > li,
+.navbar-menu > a,
+.navbar-menu > Link {
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.burger {
+  display: none;
+  grid-template-columns: 5fr 1fr;
+}
+
+.hover-effect:hover {
+  background-color: #f4ce14;
+  transition: 0.25s;
+}
+
+.nav-image {
+  max-height: 4rem;
+  margin-top: 0.7rem;
+  margin-left: -1.25rem;
+}
+
+
+
+/* FOOTER STYLING */
+footer {
+  min-height: 13rem;
+  background-color: #495e57;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  margin-top: -1.4rem;
+}
+
+footer > menu {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-header {
+  margin-bottom: -1.25rem;
+}
+
+.footer-links {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links > a,
+.footer-links > Link,
+.footer-links > li {
+  text-align: left;
+  display: block;
+  color: white;
+  padding-top: 0.2rem;
+  font-family: "Karla", "Sans Serif";
+}
+
+.footer-links > a:hover,
+.footer-links > Link:hover {
+  background-color: #495e57;
+  text-decoration: underline;
+}
+
+.img-footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-footer > img {
+  max-height: 8rem;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: 3rem;
+
+  background-color: white;
+  padding: 0.5rem;
+}
+
+/* RESERVE A TABLE */
+.reserve-table {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: -1.4rem;
+}
+
+.header-reserve {
+  width: 100vw; /* width of container */
+  height: 20rem; /* height of container */
+  object-fit: cover;
+}
+
+.reserve-header-text {
+  background-color: #495e57;
+  padding: 0 3rem 0 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  border-radius: 0.5rem;
+}
+
+.reservation-form {
+  padding: 2rem 0 0.5rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reservation-form > div {
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.confirmation-header {
+  position: relative;
+  text-align: center;
   color: white;
+  margin-top: -1.4rem;
+  min-height: 70vh;
 }
 
-.App-link {
-  color: #61dafb;
+.confirmation-image {
+  height: 70vh; /* height of container */
+  width: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.redirect-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12vw;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.redirect-button {
+  background-color: #464646;
+  color: white !important;
+  padding: 2vh 2rem 2vh 2rem;
+  border-radius: 0.5rem;
+  min-width: 12vw;
+  font-family: "Karla";
+  font-size: 18px;
+}
+
+.redirect-button:hover {
+  background-color: #f4ce14;
+  color: #464646 !important;
+  transition: 0.2s;
 }
