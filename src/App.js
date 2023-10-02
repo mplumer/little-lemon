@@ -1,6 +1,6 @@
 import "./App.css";
 import Nav from "./components/Navbar";
-import Routing from "./components/Routing";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Routing />
+      <Main />
       <Footer />
     </>
   );
