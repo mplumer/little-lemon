@@ -44,7 +44,7 @@ function BookingForm({ setAvailableTimes }) {
         <input
           type="date"
           id="res-date"
-          value={timesState.date} 
+          value={timesState.date}
           onChange={handleDateChange}
         />
         <label htmlFor="res-time">Choose time</label>
