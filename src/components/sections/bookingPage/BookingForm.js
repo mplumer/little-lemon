@@ -1,83 +1,173 @@
-import React, { useState, useReducer, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+export default function ReservationForm(props) {
+  const [fName, setFName] = useState("");
+  const [lName, setLName] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [people, setPeople] = useState(1);
+  const [date, setDate] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [preferences, setPreferences] = useState("");
+  const [comments, setComments] = useState("");
 
-// Reducer function to update available times based on the selected date
-const timesReducer = (state, action) => {
-  switch (action.type) {
-    case "UPDATE_TIMES":
-      // In this example, we return the same times regardless of the date
-      return [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-      ];
-    default:
-      return state;
+  const [finalTime, setFinalTime] = useState(
+    props.availableTimes.map((times) => <option>{times}</option>)
+  );
+
+  function handleDateChange(e) {
+    setDate(e.target.value);
+
+    var stringify = e.target.value;
+    const date = new Date(stringify);
+
+    props.updateTimes(date);
+
+    setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
   }
-};
-
-function BookingForm({ setAvailableTimes }) {
-  // Initialize availableTimes using the reducer
-  const [timesState, dispatchTimes] = useReducer(timesReducer, []);
-
-  // Additional state variables for guests and occasion
-  const [guests, setGuests] = useState("");
-  const [occasion, setOccasion] = useState("Birthday"); // Default value
-
-  // Event handler for date change
-  const handleDateChange = (event) => {
-    // Dispatch an action to update available times based on the selected date
-    dispatchTimes({ type: "UPDATE_TIMES", date: event.target.value });
-  };
-
-  useEffect(() => {
-    // When timesState changes, update the available times in the parent component
-    setAvailableTimes(timesState);
-  }, [timesState, setAvailableTimes]);
 
   return (
-    <>
-      <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
-        <label htmlFor="res-date">Choose date</label>
+    <form className="reservation-form">
+      <div>
+        <label htmlFor="fName">First Name</label> <br></br>
         <input
-          type="date"
-          id="res-date"
-          value={timesState.date}
-          onChange={handleDateChange}
-        />
-        <label htmlFor="res-time">Choose time</label>
-        <select id="res-time" value={timesState.date}>
-          {/* Map availableTimes from timesState */}
-          {timesState.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="guests">Number of guests</label>
+          type="text"
+          id="fName"
+          placeholder="First Name"
+          required
+          minLength={2}
+          maxLength={50}
+          value={fName}
+          onChange={(e) => setFName(e.target.value)}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="lName">Last Name</label> <br></br>
+        <input
+          type="text"
+          id="lName"
+          placeholder="Last Name"
+          minLength={2}
+          maxLength={50}
+          value={lName}
+          onChange={(e) => setLName(e.target.value)}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="email">Email</label> <br></br>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={email}
+          required
+          minLength={4}
+          maxLength={200}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="phonenum">Phone Number</label> <br></br>
+        <input
+          type="tel"
+          id="phonenum"
+          placeholder="(xxx)-xxx-xxxx"
+          value={tel}
+          required
+          minLength={10}
+          maxLength={25}
+          onChange={(e) => setTel(e.target.value)}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="people">Number of People</label> <br></br>
         <input
           type="number"
-          placeholder="1"
-          min="1"
-          max="10"
-          id="guests"
-          value={guests}
-          onChange={(event) => setGuests(event.target.value)}
-        />
-        <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" value={occasion} onChange={(event) => setOccasion(event.target.value)}>
-          <option value="Birthday">Birthday</option>
-          <option value="Anniversary">Anniversary</option>
+          id="people"
+          placeholder="Number of People"
+          value={people}
+          required
+          min={1}
+          max={100}
+          onChange={(e) => setPeople(e.target.value)}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="date">Select Date</label> <br></br>
+        <input
+          type="date"
+          id="date"
+          required
+          value={date}
+          onChange={handleDateChange}
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="time">Select Time</label> <br></br>
+        <select id="time" required>
+          {finalTime}
         </select>
-        <input type="submit" value="Make Your reservation" />
-      </form>
-    </>
+      </div>
+
+      <div>
+        <label htmlFor="occasion">Occasion</label> <br></br>
+        <select
+          id="occasion"
+          value={occasion}
+          onChange={(e) => setOccasion(e.target.value)}
+        >
+          <option>None</option>
+          <option>Birthday</option>
+          <option>Anniversary</option>
+          <option>Engagement</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="preferences">Seating preferences</label> <br></br>
+        <select
+          id="preferences"
+          value={preferences}
+          onChange={(e) => setPreferences(e.target.value)}
+        >
+          <option>None</option>
+          <option>Indoors</option>
+          <option>Outdoor (Patio)</option>
+          <option>Outdoor (Sidewalk)</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="comments">Additional Comments</label> <br></br>
+        <textarea
+          id="comments"
+          rows={8}
+          cols={50}
+          placeholder="Additional Comments"
+          value={comments}
+          onChange={(e) => setComments(e.target.value)}
+        ></textarea>
+      </div>
+
+      <div>
+        <br></br>
+        <small>
+          <p>
+            Note: You cannot edit your reservation after submission. Please
+            double-check your answer before submitting your reservation request.
+          </p>
+        </small>
+        <Link className="action-button" to="/confirmation">
+          Book Table
+        </Link>
+      </div>
+    </form>
   );
 }
-
-export default BookingForm;
-
-
-

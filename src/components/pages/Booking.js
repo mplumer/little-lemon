@@ -1,24 +1,20 @@
-import React, { useState } from "react";
-import BookingForm from "../sections/bookingPage/BookingForm";
 import Hero from "../sections/bookingPage/Hero";
+import BookingForm from "../sections/bookingPage/BookingForm";
+import { useReducer } from "react";
+import { fetchAPI } from "../../bookingAPI";
+export default function BookingPage() {
+  function updateTimes(date) {
+    return fetchAPI(date);
+  }
 
+  const output = fetchAPI(new Date());
 
-export default function Booking() {
-    // Move availableTimes state to Main component
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00"
-  ]);
+  const [availableTimes, dispatch] = useReducer(updateTimes, output);
 
-    return (
-        <>
-            <Hero />
-            <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} />
-        </>
-    );
+  return (
+    <>
+      <Hero />
+      <BookingForm availableTimes={availableTimes} updateTimes={dispatch} />
+    </>
+  );
 }
-
