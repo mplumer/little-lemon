@@ -1,12 +1,12 @@
-import React from "react";
+import BookingForm from "../sections/bookingPage/BookingForm";
+import Hero from "../sections/bookingPage/Hero";
 
-function Booking() {
+
+export default function Booking() {
     return (
-        <div>
-            <h1>Reservations</h1>
-            <p>Reservations coming soon!</p>
-        </div>
+        <>
+            <Hero />
+            <BookingForm />
+        </>
     );
 }
-
-export default Booking;
