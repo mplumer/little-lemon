@@ -109,6 +109,38 @@ Link:link {
   margin-left: -1.25rem;
 }
 
+/* CALL TO ACTION */
+.call-to-action {
+  background-color: #495e57;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem 5rem 1.2rem 5rem;
+  margin-top: -1.4rem;
+}
+
+.hero-text > h1 {
+  font-size: 3rem;
+  margin-top: 0rem;
+  margin-bottom: -3rem;
+}
+
+.hero-text > h2 {
+  font-size: 2.5rem;
+}
+
+.hero-image {
+  max-height: 17rem;
+  padding-left: 2rem;
+}
+
+.hero-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /* SPECIALS */
 .specials {
   padding: 2rem 5rem 0 5rem;
@@ -118,8 +150,12 @@ Link:link {
 }
 
 .specials-topbar {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .specials-topbar > h1 {
@@ -132,6 +168,19 @@ Link:link {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2vw;
+}
+
+.order-bottom {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.order-bottom > .special-icon {
+  max-width: 30px;
+  fill: #495e57;
 }
 
 .menu-card {
@@ -161,7 +210,7 @@ Link:link {
 
 .special-button {
   background-color: #f4ce14;
-  border-radius: 0.2rem;
+  border-radius: 16px;
   font-size: 1.5rem;
   padding: 0.5rem;
 }
