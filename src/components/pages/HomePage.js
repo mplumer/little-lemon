@@ -1,5 +1,6 @@
 import Hero from "../sections/homePage/Hero";
 import Specials from "../sections/homePage/Specials";
+import Testimonials from "../sections/homePage/Testimonials";
 
 
 export default function HomePage() {
@@ -8,6 +9,7 @@ export default function HomePage() {
             <main>
                 <Hero />
                 <Specials />
+                <Testimonials />
             </main>
         </>
     );
