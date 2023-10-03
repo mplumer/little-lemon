@@ -1,12 +1,11 @@
-import React from "react";
+import Hero from "../sections/menuPage/Hero";
+import MenuImg from "../sections/menuPage/Menu";
 
-function Menu() {
-    return (
-        <div>
-            <h1>Menu</h1>
-            <p>Menu coming soon!</p>
-        </div>
-    );
+export default function Menu() {
+  return (
+    <>
+      <Hero />
+      <MenuImg />
+    </>
+  );
 }
-
-export default Menu;

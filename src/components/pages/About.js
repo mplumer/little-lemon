@@ -1,14 +1,9 @@
-import React from "react";
+import Hero from "../sections/aboutPage/Hero";
 
-function About() {
-    return (
-        <div>
-            <h1>About</h1>
-            <p>
-                Little Lemon is a small business that sells lemons.
-            </p>
-        </div>
-    );
+export default function About() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
-
-export default About;

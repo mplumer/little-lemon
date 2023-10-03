@@ -1,12 +1,9 @@
-import React from 'react';
+import Hero from "../sections/loginPage/Hero";
 
-function Login() {
-    return (
-        <div>
-            <h1>Login</h1>
-            <p>Login coming soon!</p>
-        </div>
-    );
+export default function Login() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
-
-export default Login;

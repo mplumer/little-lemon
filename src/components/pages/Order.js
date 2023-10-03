@@ -1,12 +1,9 @@
-import React from 'react';
+import Hero from "../sections/orderPage/Hero";
 
-function Order() {
-    return (
-        <div>
-            <h1>Order</h1>
-            <p>Order coming soon!</p>
-        </div>
-    );
+export default function Order() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
-
-export default Order;
