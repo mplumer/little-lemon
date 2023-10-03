@@ -186,6 +186,7 @@ Link:link {
 .menu-card {
   background-color: #edefee;
   padding-bottom: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 .menu-card > img {
@@ -253,6 +254,8 @@ Link:link {
 .testimonial-card {
   background-color: #edefee;
   padding: 1rem 1rem 0 1rem;
+  height: 13rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 .stars {

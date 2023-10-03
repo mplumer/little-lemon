@@ -11,14 +11,13 @@ export default function Testimonials() {
 
             <section className="testimonials-cards">
                 <TestimonialCard name="Rick Glassman" description="This is the best Mediterranean food that I've ever had!"/>
-            <TestimonialCard name="H. Foley" description="My Shiba Inu, Mugi, really loved the cozy vibes and 
+            <TestimonialCard name="H. Foley" description="Highly recommend the Little Lemon! My Husky, Shabba, really loved the cozy vibes and 
                 delicious food here."/>
             <TestimonialCard name="Nikki Glaser" description="I've had some great Mediterranean food before, but none of them beats
              Little Lemon in flavor and texture."/>
             <TestimonialCard name="Mark Normand" description="Great food, welcoming staff, cozy atmosphere. A great place to 
                 treat your kids to."/>
-            <TestimonialCard name="Ali Wong" description="The food here really refreshed me after a late night shift
-                at the local supply depot."/>
+            <TestimonialCard name="Ali Wong" description="The Greek salad here is my favorite! I love coming here during my lunch break."/>
             <TestimonialCard name="Sam Morrill" description="I came to Little Lemon after a 5 hour flight from the East Coast.
                  The food here tasted so delicious after the trip here."/>
             <TestimonialCard name="Andrew Santino" description="The food here was fire!! Everyone should try this place

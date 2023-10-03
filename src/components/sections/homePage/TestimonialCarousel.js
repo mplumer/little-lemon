@@ -6,7 +6,7 @@ export default function CarouselPage() {
     return (
         <Carousel infiniteLoop={true} autoPlay={true} Interval={5000} showStatus={false}>
             <TestimonialCard name="Rick Glassman" description="This is the best Mediterranean food that I've ever had!"/>
-            <TestimonialCard name="H. Foley" description="My Shiba Inu, Mugi, really loved the cozy vibes and 
+            <TestimonialCard name="H. Foley" description="My husky, Shabba, really loved the cozy vibes and 
                 delicious food here."/>
             <TestimonialCard name="Nikki Glaser" description="I've had some great Mediterranean food before, but none of them beats
              Little Lemon in flavor and texture."/>
