@@ -1,3 +1,20 @@
+![Cert Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/1696473255533-8c07ae6c-217e-4a92-812c-9ff50feb9544_1.jpg)
+
+![App Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/LittleLemonHome.png)
+
+![App Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/LittleLemonReservations.png)
+
+![Wireframe Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/LL+wireframe.jpg)
+
+[Link to deployed application](https://max-sudoku.netlify.app/)
+
+### Built With
+
+- [JavaScript]()
+- [React]()
+- [CSS]()
+- [Figma]()
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
