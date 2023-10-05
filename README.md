@@ -1,3 +1,5 @@
+This is the website I created for the capstone project of the Meta Front-End Developer Specialization Certification. The wireframes and prototypes were created in Figma.
+
 ![Cert Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/1696473255533-8c07ae6c-217e-4a92-812c-9ff50feb9544_1.jpg)
 
 ![App Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/LittleLemonHome.png)
@@ -6,7 +8,7 @@
 
 ![Wireframe Screenshot](https://max-portfolio-project-assets.s3.amazonaws.com/little-lemon/LL+wireframe.jpg)
 
-[Link to deployed application](https://max-sudoku.netlify.app/)
+[Link to deployed application](https://max-meta-capstone.netlify.app/)
 
 ### Built With
 
@@ -14,6 +16,8 @@
 - [React]()
 - [CSS]()
 - [Figma]()
+- [Netlify]()
+
 
 # Getting Started with Create React App
 
